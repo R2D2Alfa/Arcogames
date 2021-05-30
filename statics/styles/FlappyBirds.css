@@ -43,16 +43,19 @@ h1{
     left: 20%;
     background-color: red;
     width: 10%;
+    height: 10px;
 }
 #tubo2{
     position: absolute;
     left: 45%;
     background-color: red;
     width: 10%;
+    height: 10px;
 }
 #tubo3{
     position: absolute;
     left: 70%;
     background-color: red;
     width: 10%;
+    height: 10px;
 }
