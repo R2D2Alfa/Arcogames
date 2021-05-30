@@ -25,6 +25,34 @@ h1{
     left: 5%;
     top: 47.5%;
     animation:salto2 2s linear infinite;
+    animation-play-state: paused;
+}
+
+#tubo1{
+    position: absolute;
+    left: 20%;
+    background-color: red;
+    width: 10%;
+    height: 10px;
+    animation:tubos 2s linear infinite;
+    animation-play-state: running;
+}
+#tubo2{
+    position: absolute;
+    left: 45%;
+    background-color: red;
+    width: 10%;
+    height: 10px;
+    animation:tubos 2s linear infinite;
+    animation-play-state: running;
+}
+#tubo3{
+    position: absolute;
+    left: 70%;
+    background-color: red;
+    width: 10%;
+    height: 10px;
+    animation:tubos 2s linear infinite;
     animation-play-state: running;
 }
 
@@ -38,24 +66,17 @@ h1{
     100% { transform: scale(1,1)      translateY(0); }
 }
 
-#tubo1{
-    position: absolute;
-    left: 20%;
-    background-color: red;
-    width: 10%;
-    height: 10px;
+@keyframes tubos{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-200px);
+    }
+    100%{
+        transform: translateX(-400px);
+    }
 }
-#tubo2{
-    position: absolute;
-    left: 45%;
-    background-color: red;
-    width: 10%;
-    height: 10px;
-}
-#tubo3{
-    position: absolute;
-    left: 70%;
-    background-color: red;
-    width: 10%;
-    height: 10px;
-}
+
+
+
