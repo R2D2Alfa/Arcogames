@@ -4,8 +4,8 @@ h1{
 }
 #fondo{
     position: absolute;
-    width: 60%;
-    height: 70%;
+    width: 600px;
+    height: 450px;
     left: 20%;
     top: 20%;
     background-color: aqua;
@@ -19,10 +19,10 @@ h1{
 }
 #bird{
     position: absolute;
-    width: 5%;
-    height: 5%;
+    width: 25px;
+    height: 25px;
     background-color: black;
-    left: 5%;
+    left: 15%;
     top: 47.5%;
     animation:salto2 2s linear infinite;
     animation-play-state: paused;
@@ -32,28 +32,53 @@ h1{
     position: absolute;
     left: 20%;
     background-color: red;
-    width: 10%;
+    width: 80px;
     height: 10px;
-    animation:tubos 2s linear infinite;
-    animation-play-state: running;
+    /*animation:tubos 2s linear infinite;
+    animation-play-state: running;*/
 }
 #tubo2{
     position: absolute;
     left: 45%;
     background-color: red;
-    width: 10%;
+    width: 80px;
     height: 10px;
-    animation:tubos 2s linear infinite;
-    animation-play-state: running;
+    /*animation:tubos 2s linear infinite;
+    animation-play-state: running;*/
 }
 #tubo3{
     position: absolute;
     left: 70%;
     background-color: red;
-    width: 10%;
+    width: 80px;
     height: 10px;
-    animation:tubos 2s linear infinite;
-    animation-play-state: running;
+    /*animation:tubos 2s linear infinite;
+    animation-play-state: running;*/
+}
+
+#tubo1a{
+    position: absolute;
+    left: 20%;
+    background-color: red;
+    width: 80px;
+    height: 10px;
+    bottom: 0%;
+}
+#tubo2a{
+    position: absolute;
+    left: 45%;
+    background-color: red;
+    width: 80px;
+    height: 10px;
+    bottom: 0%;
+}
+#tubo3a{
+    position: absolute;
+    left: 70%;
+    background-color: red;
+    width: 80px;
+    height: 10px;
+    bottom: 0%;
 }
 
 @keyframes salto2{
