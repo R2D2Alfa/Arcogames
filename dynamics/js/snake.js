@@ -4,53 +4,69 @@ let anchoCuad = canvas.width/20;
 let altoCuad = canvas.height/17;
 let pxY = 0;
 let pxX = 0;
-let arrTab = [];
-let posInY;
+let cont = 0;
 let posInX = 10;
+let vel = 60;
+let arrTab = [];
+let posSer = [];
 let dirIz = false;
 let dirDer = false;
 let dirAr = false;
 let dirAb = false;
 let inicio = true;
 let uno = false;
-let cont = 0;
+let colCom = false;
+let perdio = false;
+let uno2 = false;
+let victoria = false;
+let posInY;
 let posComida;
 let numAlYCom;
 let numAlXCom;
-let colCom = false;
-let perdio = false;
-let posSer = [];
-let vel = 60;
-
+let colComCol;
+//Números aleatorios dependiendo de si es fila o columnas entre esos rangos
 function numAl(dirTab){
     return (Math.floor(Math.random()*(dirTab-1)))+1;
 }
+//Dibujo de la serpiente, la comida, revisa condiciones de ganar/perder y genera comida aleatoria
 function dib(){
+    //Quita la primera posición del arreglo de la serpiente y se guarda en un  variable
     let colAg = posSer.shift();
+    //Revisa si la longitud del arreglo es equivalente al area del tablero y en caso de ser verdadero significa que ganó
+    victoria = ((posSer.length)===(17*20))?true:false;
+    //Limpia canvas
     ctx.clearRect(0,0,canvas.width,canvas.height);
-    if(colCom === false){
-        //while  validar que la comida no salga en partes del cuerpo de la vibora porque explota todo XD
-        numAlYCom = numAl(17);
-        numAlXCom = numAl(20);
-        colCom = true;
+    if(victoria === false){
+        //Generación de comida aleatoria mientras no esté en una posición del cuerpo de la serpiente
+        if(colCom === false){
+            do{
+                numAlYCom = numAl(17);
+                numAlXCom = numAl(20);
+                colComCol = posSer.indexOf(arrTab[numAlYCom][numAlXCom]); 
+            }while(colComCol!==-1);
+            colCom = true;
+        }//Cada que se agarra la comida, se genera nueva, se agrega al inicio del arreglo el valor quitado con lo que aumenta la longitud de la serpiente y finalmente se aumenta la velocidad de frames
+        posSer.forEach((valorES)=>{
+            if(valorES === arrTab[numAlYCom][numAlXCom]){
+                colCom = false;
+                posSer.unshift(colAg);
+                if(vel > 10){
+                    vel -= 5;
+                }
+            }
+        });
+        //Revisa si el valor de la cabeza de la serpiente equivale a otro valor del arreglo lo que significa que choco consigo misma y perdió
+        let repitio = posSer.indexOf(posSer[posSer.length-1]);
+        perdio = (repitio === (posSer.length-1))?false:true;
+        //Dibujo de comida
+        posComida = arrTab[numAlYCom][numAlXCom].split(",");
+        ctx.beginPath();
+            ctx.rect(parseFloat(posComida[0]),parseFloat(posComida[1]),anchoCuad,altoCuad);
+            ctx.fillStyle = "#572364";
+            ctx.fill();
+        ctx.closePath();
     }
-    posSer.forEach((valorES)=>{
-        if(valorES === arrTab[numAlYCom][numAlXCom]){
-            colCom = false;
-            posSer.unshift(colAg);
-            if(vel > 10){
-                vel -= 5;}
-        }
-    });
-    let repitio = posSer.lastIndexOf(posSer[0]);
-    console.log(posSer);
-    perdio = (repitio === 0)?false:true;
-    posComida = arrTab[numAlYCom][numAlXCom].split(",");
-    ctx.beginPath();
-        ctx.rect(parseFloat(posComida[0]),parseFloat(posComida[1]),anchoCuad,altoCuad);
-        ctx.fillStyle = "#572364";
-        ctx.fill();
-    ctx.closePath();
+    //Dibujo del arreglo de la serpiente
     posSer.forEach((val)=>{  
         let pos = val.split(",");
         ctx.beginPath();
@@ -60,12 +76,12 @@ function dib(){
         ctx.closePath();
     });
 }
-
+//Función que verifica si ha iniciado o no, si ha ganado o no, si ha perdido o no y finalmente lleva el control de la velocidad
 function dir(){
-    if(perdio===false)
-    {
+    if(perdio===false && victoria===false)
+    {   //Posición de inicio de la serpiente
         if(inicio===true){
-            for(posInY = 10; posInY < 14; posInY++){    
+            for(posInY = 13; posInY > 10; posInY--){    
                 let pos = arrTab[posInY][posInX].split(","); 
                 if(uno === false){
                     posSer.push(arrTab[posInY][posInX]); 
@@ -75,32 +91,61 @@ function dir(){
                 ctx.fill();
             }
             uno = true;
-        }
+        }//Llamada a la función dib(), control de la velocidad con módulo de la variable de velocidad, aumento o resta de ciertas posiciones del arreglo para el movimiento a dicha dirección
         else{
+            if(uno2===false){
+                if(dirAb===true){
+                    posInY = 13;
+                }else{
+                    posInY++;
+                }
+                uno2 = true;
+            }
             cont++;
-            if(cont%vel === 0){
+            if(cont%vel === 0){//Empuje al arreglo de la serpiente de las nuevas posiciones según la dirección y control de "atravesar" la pantalla
                 if(dirIz === true){
-                    posInX--;
+                    if(posInX > 0){
+                        posInX--;
+                    }else{
+                        posInX = 19;
+                    }
                     posSer.push(arrTab[posInY][posInX]);         
                 }
                 else if(dirDer === true){
-                    posInX++;
+                    if(posInX < 19){
+                        posInX++;
+                    }else{
+                        posInX = 0;
+                    }
                     posSer.push(arrTab[posInY][posInX]);
                 }
                 else if(dirAr === true){
-                    posInY--;
+                    if(posInY > 0){
+                        posInY--;
+                    }else{
+                        posInY = 16;
+                    }
                     posSer.push(arrTab[posInY][posInX]);
                 }
                 else if(dirAb === true){
-                    posInY++;
+                    if(posInY < 16){
+                        posInY++;
+                    }else{
+                        posInY = 0;
+                    }
                     posSer.push(arrTab[posInY][posInX]);
                 }
                 dib();
             }
         }
         requestAnimationFrame(dir);
-    }else{
-        console.log("Perdiste");
+    }else{//Victoria o derrota
+        if(perdio===true){
+            console.log("Perdiste");
+        }
+        else if(victoria ===true){
+            console.log("Ganaste");
+        }
     }
 }
 
@@ -114,28 +159,29 @@ for(let i = 0; i < 17; i++){
     }
     pxY += altoCuad;
 }
-
+//Detección de eventos
 document.querySelector("body").addEventListener("keydown",(letra)=>{
     inicio = false;
-    if(letra.key === "ArrowLeft"){
+    //Direcciones
+    if(letra.key === "ArrowLeft" && dirDer === false){
         dirIz = true;
         dirDer = false;
         dirAr = false;
         dirAb = false;
     }
-    if(letra.key === "ArrowRight"){
+    if(letra.key === "ArrowRight" && dirIz === false){
         dirDer = true;
         dirIz = false;
         dirAr = false;
         dirAb = false;
     }
-    if(letra.key === "ArrowUp"){
+    if(letra.key === "ArrowUp" && dirAb === false){
         dirAr = true;
         dirDer = false;
         dirIz = false;
         dirAb = false;
     }
-    if(letra.key === "ArrowDown"){
+    if(letra.key === "ArrowDown" && dirAr === false){
         dirAb = true;
         dirDer = false;
         dirAr = false;
