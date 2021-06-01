@@ -19,6 +19,7 @@ let colCom = false;
 let perdio = false;
 let uno2 = false;
 let victoria = false;
+let perMov = true;
 let posInY;
 let posComida;
 let numAlYCom;
@@ -136,6 +137,7 @@ function dir(){
                     posSer.push(arrTab[posInY][posInX]);
                 }
                 dib();
+                perMov = true;
             }
         }
         requestAnimationFrame(dir);
@@ -163,29 +165,35 @@ for(let i = 0; i < 17; i++){
 document.querySelector("body").addEventListener("keydown",(letra)=>{
     inicio = false;
     //Direcciones
+    if(perMov){
     if(letra.key === "ArrowLeft" && dirDer === false){
         dirIz = true;
         dirDer = false;
         dirAr = false;
         dirAb = false;
+        perMov = false;
     }
     if(letra.key === "ArrowRight" && dirIz === false){
         dirDer = true;
         dirIz = false;
         dirAr = false;
         dirAb = false;
+        perMov = false;
     }
     if(letra.key === "ArrowUp" && dirAb === false){
         dirAr = true;
         dirDer = false;
         dirIz = false;
         dirAb = false;
+        perMov = false;
     }
     if(letra.key === "ArrowDown" && dirAr === false){
         dirAb = true;
         dirDer = false;
         dirAr = false;
         dirIz = false;
+        perMov = false;
     }
+}
 });
 requestAnimationFrame(dir);
