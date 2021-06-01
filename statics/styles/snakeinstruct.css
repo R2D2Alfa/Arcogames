@@ -1,0 +1,109 @@
+/*--------------------------------Fuente arcade--------------------------------------------*/
+@font-face {
+    font-family: 'Arcade';
+    src: url('../fonts/ARCADECLASSIC.TTF') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+/*----------------------------------Body--------------------------------------------------*/
+body{
+    background-image: url(../img/533ba3.png);
+}
+#title{
+    text-align: center;
+    font-family: 'Arcade';
+    font-size: 60px;
+    color: white;
+}
+/*----------------------------------Navbar----------------------------------------------*/
+#nav{
+    background-color: #532B75;
+    border-color: black;
+}
+
+#bot{
+    background-image: url(../img/flecha.png);
+    position: relative;
+    left: -0%;
+}
+
+#Lnav{   /*letritas del nav*/
+    font-family: 'Arcade';
+    font-size: 20px;
+    color: white;
+}
+#Lpuntajes{   /*letritas de los puntajes*/
+    font-family: 'Arcade';
+    font-size: 20px;
+    color: white;
+}
+#Lcreditos{   /*letritas del nav*/
+    font-family: 'Arcade';
+    font-size: 20px;
+    color: white;
+}
+#navbarDropdown{ /*letritas del dropdown del nav*/
+    font-family: 'Arcade';
+    font-size: 20px;
+    color: white;
+}
+#fonods{   /*Para lo de cambiar los fondos*/
+    font-family: 'Arcade';
+    background-color: #532B75;
+}
+/*letritas del dropdown*/
+#LfonodsOsc{ 
+    color: white;
+}
+#LfonodsOsc:hover{
+   color: black;
+}
+#LfonodsCl{
+    color: white;
+}
+#LfonodsCl:hover{
+   color: black;
+}
+/*Botones para cambiar el color (oscuro o claro)*/
+#claro{
+    font-family: 'Arcade';
+    background-color: #532B75;
+    color: white;
+    border: none;
+}
+#claro:hover{
+    background-color: #ececec;    
+    color: black;
+}
+#oscuro{
+    font-family: 'Arcade';
+    background-color: #532B75;
+    color: white;
+    border: none;
+}
+#oscuro:hover{
+    background-color: #ececec;    
+    color: black;
+}
+/*----------------------------------Card (instrucciones)----------------------------------------*/
+#card{
+    background-color:#B058C6;
+    position: relative;
+    left: 30%;
+}
+#Lins{
+    font-family: 'Arcade';
+    color: white;
+}
+#Lins2{
+    font-family: 'Arcade';
+    color: white;
+}
+#Bsnake{
+    background-color: #97BBE8;
+    font-family: 'Arcade';
+    color: white;
+    border-color: none;
+    position: relative;
+    left: 40%;
+}
