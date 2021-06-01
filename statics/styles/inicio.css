@@ -13,7 +13,7 @@ body{
     text-align: center;
     font-family: 'Arcade';
     font-size: 60px;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 /*----------------------------------Navbar----------------------------------------------*/
 #nav{
@@ -54,7 +54,7 @@ body{
 #LfonodsCl:hover{
    color: black;
 }
-/*Botones para cambiar el color (oscuro o claro)*/
+/*=Botones para cambiar el color (oscuro o claro)*/
 #claro{
     font-family: 'Arcade';
     background-color: #532B75;
@@ -74,4 +74,31 @@ body{
 #oscuro:hover{
     background-color: #ececec;    
     color: black;
+}
+/*=----------------------------------LOGO----------------------------------------------*/
+#logo
+{  
+    position: absolute;
+    width: 388px;
+    height: 381px;
+    left: 40%;
+    top: 25%;
+}
+/*=----------------------------------FORMS----------------------------------------------*/
+
+#iniciar
+{
+    position: absolute;
+    background-color: transparent;
+    border-radius: 38.5px;
+    position: absolute;
+    left: 0%;
+    top: 85%;
+}
+#jugador
+{
+    position: absolute;
+    border-radius: 1em 1em 1em 1em;
+    left: 0%;
+    top: 30%;
 }
