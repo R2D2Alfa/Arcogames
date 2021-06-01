@@ -13,9 +13,11 @@ $(document).ready(function() {
         /*Instrucciones*/
         $('#card').css('background', '#DE93D1'); //card de instrucciones  
         $('#Bbird').css('background', '#A764D1') //boton de jugar
+        $('#Breturn').css('background', '#A764D1') //boton de return
         $('#Lins').css('color', '#293133'); //letras de las instrucciones
         $('#Lins2').css('color', '#293133'); //letritas de las instrucciones 2
         $('#Bbird').css('color', '#293133'); //color de las letras del boton de jugar
+        $('#Breturn').css('color', '#293133'); //color de las letras del boton de return
     });
     //modo oscuro
     $('.oscuro').click(function(event) { 
@@ -31,8 +33,10 @@ $(document).ready(function() {
         /*Instrucciones*/
         $('#card').css('background', '#B058C6');
         $('#Bbird').css('background', '#97BBE8')
+        $('#Breturn').css('background', '#97BBE8')
         $('#Lins').css('color', '#ffffff');
         $('#Lins2').css('color', '#ffffff');
         $('#Bbird').css('color', '#ffffff');
+        $('#Breturn').css('color', '#ffffff');
     });
 });
