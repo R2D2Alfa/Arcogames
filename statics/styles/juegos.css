@@ -1,0 +1,125 @@
+/*--------------------------------Fuente arcade--------------------------------------------*/
+@font-face {
+    font-family: 'Arcade';
+    src: url('../fonts/ARCADECLASSIC.TTF') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+/*----------------------------------Body--------------------------------------------------*/
+body{
+    background-image: url(../img/533ba3.png);
+}
+#title{
+    text-align: center;
+    font-family: 'Arcade';
+    font-size: 60px;
+    color: white;
+}
+/*----------------------------------Navbar----------------------------------------------*/
+#nav{
+    background-color: #532B75;
+    border-color: black;
+}
+
+#bot{
+    background-image: url(../img/flecha.png);
+    position: relative;
+    left: -0%;
+}
+
+#Lnav{   /*letritas del nav*/
+    font-family: 'Arcade';
+    font-size: 20px;
+    color: white;
+}
+#Lpuntajes{   /*letritas de los puntajes*/
+    font-family: 'Arcade';
+    font-size: 20px;
+    color: white;
+}
+#Lcreditos{   /*letritas del nav*/
+    font-family: 'Arcade';
+    font-size: 20px;
+    color: white;
+}
+#navbarDropdown{ /*letritas del dropdown del nav*/
+    font-family: 'Arcade';
+    font-size: 20px;
+    color: white;
+}
+#fonods{   /*Para lo de cambiar los fondos*/
+    font-family: 'Arcade';
+    background-color: #532B75;
+}
+/*letritas del dropdown*/
+#LfonodsOsc{ 
+    color: white;
+}
+#LfonodsOsc:hover{
+   color: black;
+}
+#LfonodsCl{
+    color: white;
+}
+#LfonodsCl:hover{
+   color: black;
+}
+/*Botones para cambiar el color (oscuro o claro)*/
+#claro{
+    font-family: 'Arcade';
+    background-color: #532B75;
+    color: white;
+    border: none;
+}
+#claro:hover{
+    background-color: #ececec;    
+    color: black;
+}
+#oscuro{
+    font-family: 'Arcade';
+    background-color: #532B75;
+    color: white;
+    border: none;
+}
+#oscuro:hover{
+    background-color: #ececec;    
+    color: black;
+}
+/*-----------------------------Cards------------------------------------------*/
+#Lbird{
+    position: relative;
+    left: 15%;
+    font-family: 'Arcade';
+    color: white;
+    font-size: 40px;
+}
+#Lsnake{
+    position: relative;
+    left: 25%;
+    font-family: 'Arcade';
+    color: white;
+    font-size: 40px;
+}
+#bplay{ /*Boton del flappy bird*/
+    position: relative;
+    left: 25%;
+    font-family: 'Arcade';
+    font-size: 40px;
+    background-color: #B058C6;
+    border-radius: 20%;
+}
+#bplay:hover{
+    background-color: teal;
+}
+
+#bplay2{ /*Boton del snake*/
+    position: relative;
+    left: 25%;
+    font-family: 'Arcade';
+    font-size: 40px;
+    background-color: #B058C6;
+    border-radius: 20%;
+}
+#bplay2:hover{
+    background-color: teal;
+}
