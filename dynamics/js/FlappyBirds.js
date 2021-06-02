@@ -23,6 +23,8 @@
   //Letrero de game over y boton de jugar de nuevo
   let gameover = document.getElementById("over");
   let jugar = document.getElementById("jugar");
+  let puntaje = 0
+  let p = document.getElementById("puntuacion")
 
   //Funciones random para las alturas
   function random2() {
@@ -329,6 +331,13 @@
         console.log(post1y);
         console.log(post1h);
         console.log(pos1y);
+      }
+      if(pos1x == post1x && tubo1.style.display == "block"
+        || pos1x == post2x &&tubo1.style.display == "block"|| 
+        pos1x == post3x && tubo1.style.display == "block"){
+        puntaje++
+        console.log(puntaje)
+        p.innerHTML = puntaje
       }
     }
   }

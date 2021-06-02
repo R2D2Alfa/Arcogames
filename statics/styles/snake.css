@@ -102,15 +102,3 @@ canvas{
 #serpiente{
   background-image: url(../img/sepiente.jpg);
 }
-
-/*-------------------Boton de regresar-----------------------*/
-
-#Breturn{ 
-  background-color: #97BBE8;
-  font-family: 'Arcade';
-  color: white;
-  border-color: none;
-  position: relative;
-  left: 70%;
-  top: 0%;
-}
