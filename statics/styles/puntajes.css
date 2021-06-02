@@ -13,7 +13,7 @@ body{
     text-align: center;
     font-family: 'Arcade';
     font-size: 60px;
-    color: black;
+    color: white;
 }
 /*----------------------------------Navbar----------------------------------------------*/
 #nav{
@@ -28,6 +28,16 @@ body{
 }
 
 #Lnav{   /*letritas del nav*/
+    font-family: 'Arcade';
+    font-size: 20px;
+    color: white;
+}
+#Lpuntajes{   /*letritas de los puntajes*/
+    font-family: 'Arcade';
+    font-size: 20px;
+    color: white;
+}
+#Ljuegos{   /*letritas del nav*/
     font-family: 'Arcade';
     font-size: 20px;
     color: white;
@@ -74,4 +84,12 @@ body{
 #oscuro:hover{
     background-color: #ececec;    
     color: black;
+}
+/*----------------------------------Tabla--------------------------------------------------*/
+
+h3{
+    text-align: center;
+    font-family: 'Arcade';
+    font-size: 60px;
+    color: white;
 }
