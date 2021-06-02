@@ -27,9 +27,7 @@
   let valCook = 1;
   let valRec;
   let p = document.getElementById("puntuacion")
-  //Cookies de puntuacion
-  let valCook = 1;
-let valRec;
+
 
   //Funciones random para las alturas
   function random2() {
@@ -80,7 +78,6 @@ let valRec;
         fecha.setTime(fecha.getTime()+1000*60*60*24*7);
         document.cookie="puntaje_"+valCook.toString()+"="+puntaje.toString()+","+cadFechAct+"; expires="+fecha.toGMTString();
         let jugador;
-        let fecha;
         let formFech = [];
         obtCookies("jugador");
 
