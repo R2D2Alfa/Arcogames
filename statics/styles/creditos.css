@@ -102,9 +102,6 @@ body{
     text-align: center;
     color: white;
 }
-#arturo:hover{
-    background-image: url(../img/alexa\ \(1\).jpg);
-}
 #arturoF{
     position: relative;
     left: 0%;

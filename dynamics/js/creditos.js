@@ -37,3 +37,43 @@ $(document).ready(function() {
         $('#emiliano').css('color', '#ffffff');
       });
 });
+
+/*<div class="row"> <br>
+     <!--////Tamaño de las columnas de los nombres/fotos -->
+     <div class="col-lg-12"  class="col-md-12">
+      <p id="title">Creadores</p>  
+     </div>
+     <div class="col-lg-6"  class="col-md-12"> 
+       <br>  
+       <div id="creadores" class="creadores">
+         <div id="arturo"><h4>&nbsp;&nbsp;Artuo Alfaro Dominguez</h4></div>
+       </div>  
+       <br> 
+       <img src="../statics/img/arturo (1).jpg" class="img-thumbnail" alt="arturo" id="arturoF">
+     </div> 
+     <div class="col-lg-6"  class="col-md-12">    
+      <br>  
+      <div id="creadores" class="creadores">
+        <div id="victor"><h4>&nbsp;&nbsp;Victor Manuel Escobar Diaz</h4></div>
+      </div>   
+      <br>  
+      <img src="../statics/img/victor (1).jpg" class="img-thumbnail" alt="victor" id="victorF">
+    </div> 
+    <div class="col-lg-6"  class="col-md-12">    
+      <br>  
+      <div id="creadores" class="creadores">
+        <div id="alexa"><h4>&nbsp;&nbsp;Alexa Flores Medero Campos</h4></div>
+      </div>   
+      <br>  
+      <img src="../statics/img/alexa (1).jpg" class="img-thumbnail" alt="alexa" id="alexaF">
+    </div> 
+    <div class="col-lg-6"  class="col-md-12">    
+      <br>  
+      <div id="creadores" class="creadores">
+        <div id="emiliano"><h4>&nbsp;&nbsp;Emiliano</h4></div>
+      </div>   
+      <br>  
+      <img src="../statics/img/emilieno (1).jpg" class="img-thumbnail" alt="emiliano" id="emilianoF">
+    </div> 
+    
+  </div> */
