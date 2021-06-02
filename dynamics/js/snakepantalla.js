@@ -1,19 +1,40 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../statics/styles/snake.css">
-    <title>Prueba</title>
-</head>
-<body>
-    <canvas id="canvas"></canvas>
-    <script src="../dynamics/js/snake.js"></script>
-</body>
-</html>-->
+$(document).ready(function() {
+    //modo claro
+      $('.claro').click(function(event) {
+        /*nav*/
+        $('body').css('background', '#97BBE8'); //el body
+        $('#title').css('color', '#293133');  //titulo
+        $('#nav').css('background', '#5467C7'); //color del navbar
+        $('#Lnav').css('color', '#293133'); //letras del nav 
+        $('#Lpuntajes').css('color', '#293133'); //letras puntajes
+        $('#Lcreditos').css('color', '#293133'); //letras creditos
+        $('#navbarDropdown').css('color', '#293133'); //letras dropdown
+        $('#fonods').css('background', '#5467C7'); //cajita del dropdown
+        /*juego*/
+        $('#marcador').css('background', '#97BBE8'); //fondito que tapa las 
+        $('#Breturn').css('background', '#A764D1') //boton de return
+        
+      });
+      //modo oscuro
+      $('.oscuro').click(function(event) { 
+          /*nav*/
+          $('body').css('background', '#533ba3'); 
+          $('#title').css('color', '#ffffff');
+          $('#nav').css('background', '#532B75');
+          $('#Lnav').css('color', '#ffffff');
+          $('#Lpuntajes').css('color', '#ffffff'); 
+          $('#Lcreditos').css('color', '#ffffff'); 
+          $('#navbarDropdown').css('color', '#ffffff');
+          $('#fonods').css('background', '#532B75');
+          /*juego*/
+          $('#marcador').css('background', '#533Ba3');
+          $('#Breturn').css('background', '#97BBE8');
+        });
+  });
 
-<!DOCTYPE html>
+
+  /*
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -61,8 +82,7 @@
     </div>
   </nav>
   <br>
- <!--////////////////Boton de regresar/////////////////////-->
- <a href="./juegos.html" class="btn btn-primary" id="Breturn">Regresar</a>
+
     
      <!--//////////////boopstrap///////////////-->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
@@ -70,8 +90,8 @@
 
       <!--/////////Script para cambiar los fondos///////////-->
       <script src="../dynamics/js/snakepantalla.js"></script>
-      <!--///////////////////////Imagen de la serpiente/////////////////////////////////-->
-      <div id="serpiente"></div>
+     
+      <script src="../dynamics/js/snake.js"></script>
       <!--////////////////////Contenedor////////////////////////////////////-->
  <div class="container">
     <div class="row">
@@ -79,8 +99,21 @@
            <canvas id="canvas"></canvas>
         </div>
     </div>
-    <script src="../dynamics/js/snake.js"></script>
 </div>
 </body>
 </html>
  
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../statics/styles/snake.css">
+    <title>Prueba</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script src="../dynamics/js/snake.js"></script>
+</body>
+</html>-->*/
