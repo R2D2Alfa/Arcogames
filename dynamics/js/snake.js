@@ -7,6 +7,7 @@ let pxX = 0;
 let cont = 0;
 let posInX = 10;
 let vel = 60;
+let puntaje = 0;
 let arrTab = [];
 let posSer = [];
 let dirIz = false;
@@ -49,6 +50,7 @@ function dib(){
         }//Cada que se agarra la comida, se genera nueva, se agrega al inicio del arreglo el valor quitado con lo que aumenta la longitud de la serpiente y finalmente se aumenta la velocidad de frames
         posSer.forEach((valorES)=>{
             if(valorES === arrTab[numAlYCom][numAlXCom]){
+                puntaje++;
                 colCom = false;
                 posSer.unshift(colAg);
                 if(vel > 10){
@@ -142,6 +144,10 @@ function dir(){
         }
         requestAnimationFrame(dir);
     }else{//Victoria o derrota
+        let fecha = new Date();
+        //Concatenar en una sola cookie el puntaje, jugador y fecha con un separador comun para en puntaje.js hacer comparaciones de puntajes 
+        fecha.setTime(fecha.getTime()+1000*60*60*24*7);
+        document.cookie="puntaje="+puntaje.toString()+"; expires="+fecha.toGMTString();
         if(perdio===true){
             console.log("Perdiste");
         }

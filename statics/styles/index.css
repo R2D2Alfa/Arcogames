@@ -42,7 +42,7 @@ body{
     background-color: #532B75;
 }
 /*letritas del dropdown*/
-#LfonodsOsc{ 
+#LfonodsOsc{
     color: white;
 }
 #LfonodsOsc:hover{
@@ -62,7 +62,7 @@ body{
     border: none;
 }
 #claro:hover{
-    background-color: #ececec;    
+    background-color: #ececec;
     color: black;
 }
 #oscuro{
@@ -72,33 +72,31 @@ body{
     border: none;
 }
 #oscuro:hover{
-    background-color: #ececec;    
+    background-color: #ececec;
     color: black;
 }
-/*=----------------------------------LOGO----------------------------------------------*/
-#logo
-{  
-    position: absolute;
-    width: 388px;
-    height: 381px;
-    left: 40%;
-    top: 25%;
-}
+
 /*=----------------------------------FORMS----------------------------------------------*/
 
-#iniciar
-{
+#container{
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+#logo{
+  position: absolute;
+  text-align: center;
+  width: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+#iniciar{
     position: absolute;
     background-color: transparent;
     border-radius: 38.5px;
-    position: absolute;
-    left: 0%;
-    top: 85%;
-}
-#jugador
-{
-    position: absolute;
-    border-radius: 1em 1em 1em 1em;
-    left: 0%;
-    top: 30%;
+    top:120%;
+    transform: translate(-50%,-50%);
 }
