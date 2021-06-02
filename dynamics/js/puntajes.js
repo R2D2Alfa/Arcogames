@@ -1,3 +1,7 @@
+let jugador;
+let puntaje;
+let fecha;
+let formFech = [];
 $(document).ready(function() {
     //modo claro
       $('.claro').click(function(event) {
@@ -26,3 +30,28 @@ $(document).ready(function() {
         
         });
   });
+  obtCookies("jugador");
+
+  function obtCookies(nombre){
+    let cookies = document.cookie;
+    let arrCook = cookies.split(";");
+    for(let val of arrCook){
+      let cookie = val.split("=");
+      if(cookie[0]===nombre){
+        jugador = cookie[1];
+      }
+      else{
+        let puntFech = cookie[1].split(",");  puntaje_2="3,13/20/32"
+        puntaje = puntFech[0];
+        fecha = puntFech[1];
+        formFech = fecha.split(" ");
+        imprimir();
+      }
+    }
+  };
+function imprimir(){
+  let h1 = document.createElement("h1");
+  let padre = document.getElementById("puntajes");
+  h1.innerText = jugador+": "+puntaje+", "+formFech[2]+"/"+formFech[1]+"/"+formFech[3]+" "+formFech[4];
+  padre.appendChild(h1);
+};
