@@ -87,9 +87,24 @@ body{
 }
 /*----------------------------------Tabla--------------------------------------------------*/
 
-h3{
+#title{
     text-align: center;
     font-family: 'Arcade';
     font-size: 60px;
     color: white;
+}
+#tit,h3{
+    text-align: center;
+    font-family: 'Arcade';
+    font-size: 30px;
+    color: white;
+}
+td,th
+{
+    border-color: #B058C6;
+    border-width: 3px;
+}
+table{
+    border-collapse: separate;
+    border-spacing:15px;
 }
