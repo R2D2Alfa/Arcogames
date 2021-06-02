@@ -160,7 +160,7 @@ function dir(){
         let fechaAct = new Date();
         cadFechAct = fechaAct.toString();
         fecha.setTime(fecha.getTime()+1000*60*60*24*7);
-        document.cookie="puntaje_"+valCook.toString()+"="+puntaje.toString()+","+cadFechAct+"; expires="+fecha.toGMTString();
+        document.cookie="puntaje_"+valCook.toString()+"="+puntaje.toString()+","+cadFechAct+",snake; expires="+fecha.toGMTString();
         if(perdio===true){
             console.log("Perdiste");
         }

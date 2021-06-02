@@ -1,6 +1,7 @@
 let jugador;
 let puntaje;
 let fecha;
+let juego;
 let formFech = [];
 $(document).ready(function() {
     //modo claro
@@ -41,9 +42,10 @@ $(document).ready(function() {
         jugador = cookie[1];
       }
       else{
-        let puntFech = cookie[1].split(",");  puntaje_2="3,13/20/32"
+        let puntFech = cookie[1].split(",");
         puntaje = puntFech[0];
         fecha = puntFech[1];
+        juego = puntFech[2];
         formFech = fecha.split(" ");
         imprimir();
       }
@@ -52,6 +54,6 @@ $(document).ready(function() {
 function imprimir(){
   let h1 = document.createElement("h1");
   let padre = document.getElementById("puntajes");
-  h1.innerText = jugador+": "+puntaje+", "+formFech[2]+"/"+formFech[1]+"/"+formFech[3]+" "+formFech[4];
+  h1.innerText = jugador+": "+puntaje+", "+formFech[2]+"/"+formFech[1]+"/"+formFech[3]+" "+formFech[4]+" "+juego;
   padre.appendChild(h1);
 };
