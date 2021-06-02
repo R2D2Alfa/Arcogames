@@ -13,7 +13,7 @@ body{
   text-align: center;
   font-family: 'Arcade';
   font-size: 60px;
-  color: rgb(255, 255, 255);
+  color: white;
 }
 /*----------------------------------Navbar----------------------------------------------*/
 #nav{
@@ -32,6 +32,16 @@ body{
   font-size: 20px;
   color: white;
 }
+#Lpuntajes{   /*letritas de los puntajes*/
+  font-family: 'Arcade';
+  font-size: 20px;
+  color: white;
+}
+#Lcreditos{   /*letritas del nav*/
+  font-family: 'Arcade';
+  font-size: 20px;
+  color: white;
+}
 #navbarDropdown{ /*letritas del dropdown del nav*/
   font-family: 'Arcade';
   font-size: 20px;
@@ -42,7 +52,7 @@ body{
   background-color: #532B75;
 }
 /*letritas del dropdown*/
-#LfonodsOsc{
+#LfonodsOsc{ 
   color: white;
 }
 #LfonodsOsc:hover{
@@ -54,7 +64,7 @@ body{
 #LfonodsCl:hover{
  color: black;
 }
-/*=Botones para cambiar el color (oscuro o claro)*/
+/*Botones para cambiar el color (oscuro o claro)*/
 #claro{
   font-family: 'Arcade';
   background-color: #532B75;
@@ -62,7 +72,7 @@ body{
   border: none;
 }
 #claro:hover{
-  background-color: #ececec;
+  background-color: #ececec;    
   color: black;
 }
 #oscuro{
@@ -72,6 +82,23 @@ body{
   border: none;
 }
 #oscuro:hover{
-  background-color: #ececec;
+  background-color: #ececec;    
   color: black;
+}
+/*--------------------------------canvas----------------------------------*/
+canvas{
+  /*  w1440
+    h1024*/
+      
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    height: 70%;
+    width: 60%;
+    background-image: url(../img/morado.jpg);
+    border: black;
+}
+
+#serpiente{
+  background-image: url(../img/sepiente.jpg);
 }

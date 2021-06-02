@@ -67,7 +67,7 @@ function dib(){
         posComida = arrTab[numAlYCom][numAlXCom].split(",");
         ctx.beginPath();
             ctx.rect(parseFloat(posComida[0]),parseFloat(posComida[1]),anchoCuad,altoCuad);
-            ctx.fillStyle = "#572364";
+            ctx.fillStyle = "#5467C7";//comida
             ctx.fill();
         ctx.closePath();
     }
@@ -76,7 +76,7 @@ function dib(){
         let pos = val.split(",");
         ctx.beginPath();
             ctx.rect(parseFloat(pos[0]),parseFloat(pos[1]),anchoCuad,altoCuad);
-            ctx.fillStyle = "#FF0000";
+            ctx.fillStyle = "#DE28B3"; //serpiente
             ctx.fill();
         ctx.closePath();
     });
@@ -92,7 +92,7 @@ function dir(){
                     posSer.push(arrTab[posInY][posInX]); 
                 }
                 ctx.rect(parseFloat(pos[0]),parseFloat(pos[1]),anchoCuad,altoCuad);
-                ctx.fillStyle = "#FF0000";
+                ctx.fillStyle = "#DE28B3";
                 ctx.fill();
             }
             uno = true;
@@ -163,6 +163,7 @@ function dir(){
         document.cookie="puntaje_"+valCook.toString()+"="+puntaje.toString()+","+cadFechAct+",snake; expires="+fecha.toGMTString();
         if(perdio===true){
             console.log("Perdiste");
+            document.body.innerHTML = '<h1>Perdiste</h1>'
         }
         else if(victoria ===true){
             console.log("Ganaste");
