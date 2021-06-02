@@ -51,21 +51,7 @@
   jugar.style.display = "none";
   //Funcion si se pierde
   function perdiste() {
-    let cookies = document.cookie;
-        let arrCookies = cookies.split(";");
-        if(arrCookies.length >= 2){
-    for(let val of arrCookies){
-      let nomb = val.split("=");
-      valRec = nomb[0];
-      let valGalleta = valRec.split("_");
-      valCook = parseInt(valGalleta[1])+1;
-      }
-    }
-    let fecha = new Date();
-    let fechaAct = new Date();
-    cadFechAct = fechaAct.toString();
-    fecha.setTime(fecha.getTime()+1000*60*60*24*7);
-    document.cookie="puntaje_"+valCook.toString()+"="+puntaje.toString()+","+cadFechAct+",FlappyBirds; expires="+fecha.toGMTString();
+
     tubo1.style.display = "none";
     tubo2.style.display = "none";
     tubo3.style.display = "none";
@@ -380,6 +366,21 @@
   }
 //Boton para reiniciar si se desea volver a jugar
   jugar.addEventListener("click", () => {
+    let cookies = document.cookie;
+        let arrCookies = cookies.split(";");
+        if(arrCookies.length >= 2){
+            for(let val of arrCookies){
+                let nomb = val.split("=");
+                valRec = nomb[0];
+                let valGalleta = valRec.split("_");
+                valCook = parseInt(valGalleta[1])+1;
+            }
+        }
+        let fecha = new Date();
+        let fechaAct = new Date();
+        cadFechAct = fechaAct.toString();
+        fecha.setTime(fecha.getTime()+1000*60*60*24*7);
+        document.cookie="puntaje_"+valCook.toString()+"="+puntaje.toString()+","+cadFechAct+",snake; expires="+fecha.toGMTString();
     window.location.reload();
   });
 });

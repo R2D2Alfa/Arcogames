@@ -183,10 +183,10 @@ for(let i = 0; i < 17; i++){
 }
 //Detección de eventos
 document.querySelector("body").addEventListener("keydown",(letra)=>{
-    inicio = false;
     //Direcciones
     if(perMov){
     if(letra.key === "ArrowLeft" && dirDer === false){
+        inicio = false
         dirIz = true;
         dirDer = false;
         dirAr = false;
@@ -194,6 +194,7 @@ document.querySelector("body").addEventListener("keydown",(letra)=>{
         perMov = false;
     }
     if(letra.key === "ArrowRight" && dirIz === false){
+        inicio = false
         dirDer = true;
         dirIz = false;
         dirAr = false;
@@ -201,6 +202,7 @@ document.querySelector("body").addEventListener("keydown",(letra)=>{
         perMov = false;
     }
     if(letra.key === "ArrowUp" && dirAb === false){
+        inicio = false
         dirAr = true;
         dirDer = false;
         dirIz = false;
@@ -208,6 +210,7 @@ document.querySelector("body").addEventListener("keydown",(letra)=>{
         perMov = false;
     }
     if(letra.key === "ArrowDown" && dirAr === false){
+        inicio = false
         dirAb = true;
         dirDer = false;
         dirAr = false;
