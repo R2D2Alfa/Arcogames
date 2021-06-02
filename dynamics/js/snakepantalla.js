@@ -1,8 +1,3 @@
-let jugador;
-let puntaje;
-let fecha;
-let juego;
-let formFech = [];
 $(document).ready(function() {
     //modo claro
       $('.claro').click(function(event) {
@@ -15,6 +10,9 @@ $(document).ready(function() {
         $('#Lcreditos').css('color', '#293133'); //letras creditos
         $('#navbarDropdown').css('color', '#293133'); //letras dropdown
         $('#fonods').css('background', '#5467C7'); //cajita del dropdown
+        /*juego*/
+        $('#marcador').css('background', '#97BBE8'); //fondito que tapa las 
+        $('#Breturn').css('background', '#A764D1') //boton de return
         
       });
       //modo oscuro
@@ -28,32 +26,8 @@ $(document).ready(function() {
           $('#Lcreditos').css('color', '#ffffff'); 
           $('#navbarDropdown').css('color', '#ffffff');
           $('#fonods').css('background', '#532B75');
-        
+          /*juego*/
+          $('#marcador').css('background', '#533Ba3');
+          $('#Breturn').css('background', '#97BBE8');
         });
   });
-  obtCookies("jugador");
-
-  function obtCookies(nombre){
-    let cookies = document.cookie;
-    let arrCook = cookies.split(";");
-    for(let val of arrCook){
-      let cookie = val.split("=");
-      if(cookie[0]===nombre){
-        jugador = cookie[1];
-      }
-      else{
-        let puntFech = cookie[1].split(",");
-        puntaje = puntFech[0];
-        fecha = puntFech[1];
-        juego = puntFech[2];
-        formFech = fecha.split(" ");
-        imprimir();
-      }
-    }
-  };
-function imprimir(){
-  let h1 = document.createElement("h1");
-  let padre = document.getElementById("puntajes");
-  h1.innerText = jugador+": "+puntaje+", "+formFech[2]+"/"+formFech[1]+"/"+formFech[3]+" "+formFech[4]+" "+juego;
-  padre.appendChild(h1);
-};
