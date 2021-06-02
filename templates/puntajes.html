@@ -5,12 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puntajes</title><!--//////////////CSS :)///////////////-->
-    <link rel="stylesheet" href="../statics/styles/puntajes.css">
-    <script src="../lib/jquery-3.6.0.min.js"></script>
-
     <!--//////////////boopstrap///////////////-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="../statics/styles/puntajes.css">
+    <script src="../lib/jquery-3.6.0.min.js"></script>
 </head>
 <body>
      <!--//////////////boopstrap///////////////-->
@@ -47,20 +46,41 @@
             </div>
         </div>
     </nav>
-     <table border="1">
-        <thead>
-          <tr>
-            <th><h3>n</h3></th>
-            <th><h3>flappy bird</h3></th>
-            <th><h3>snake</h3></th>
-            <th><h3>jugador</h3></th>
-            <th><h3>fecha y hora</h3></th>
-          </tr>  
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-      <div id="puntajes"></div>
+    <p id="title">puntajes</p>  
+    <div id="tabla">
+        <table border="1">
+            <thead>
+              <tr>
+                <th colspan="2" class="tit"><h3>jugador:</h3></th>
+                <th colspan="5"></th>
+              </tr>  
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td class="tit"><h3>Flappy Bird</h3></td>
+                    <td class="tit"><h3>Snake</h3></td>
+                    <td class="tit"><h3>Fecha</h3></td>
+                    <td class="tit"><h3>Hora</h3></td>
+                </tr>  
+                <tr>
+                    <td class="tit"><h3>Puntaje maximo</h3></td>
+                    <td><p></p></td>
+                    <td><p></p></td>
+                    <td><p></p></td>
+                    <td><p></p></td>
+                </tr>  
+                <tr>
+                    <td class="tit"><h3>Puntaje minimo</h3></td>
+                    <td><p></p></td>
+                    <td><p></p></td>
+                    <td><p></p></td>
+                    <td><p></p></td>
+                </tr>  
+            </tbody>
+          </table>
+    </div>
+     <div id="puntajes"></div>
       <script src="../dynamics/js/puntajes.js"></script>
 </body>
 </html>

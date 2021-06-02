@@ -4,28 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrucciones</title>
+    <!--//////////////CSS :)///////////////-->
     <link rel="stylesheet" href="../statics/styles/FlappyBirds.css">
-    <link rel="shortcut icon" type="image/png" href="../statics/img/coyotePNG.png"/>
+    <!--//////////////script///////////////-->
     <script src="../dynamics/js/FlappyBirds.js"></script>
-    <title>FlappyBirds</title>
-</head>
-<body id="body">
-    <h1>Flappy Birds</h1>
-    <div id="fondo">
-        <img src="../statics/img/WhatsApp Image 2021-05-31 at 18.23.26.jpeg" alt="">
-        <div id="pasto"></div>
-        <div id="bird"></div>
-        <h1 id="over">Game Over</h1>
-        <h3 id="msj"></h3>
-        <div id="tubo1"><img src="../statics/img/533ba3.png" alt="Yakult"></div>
-        <div id="tubo2"><img src="../statics/img/533ba3.png" alt="Yakult"></div>
-        <div id="tubo3"><img src="../statics/img/533ba3.png" alt="Yakult"></div>
-        <div id="tubo1a"><img src="../statics/img/533ba3.png" alt="Yakult"></div>
-        <div id="tubo2a"><img src="../statics/img/533ba3.png" alt="Yakult"></div>
-        <div id="tubo3a"><img src="../statics/img/533ba3.png" alt="Yakult"></div>
-        <div id="marcador"></div>
-        <div id="jugar">Jugar de nuevo</div>
-    </div>
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <!--//////////////boopstrap///////////////-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
+</head>
+<body id="body"> 
+    <!--//////////////boopstrap///////////////-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> 
+
+     <!--//////////////////////////////////////////Navbar///////////////////////////////-->
+     <nav class="navbar navbar-expand-lg " id="nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../templates/inicio.html" id="Lnav"><strong>Arcogames</strong></a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="bot">
+             <span class="navbar-toggler-icon" id="bot"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarNav">
+             <ul class="navbar-nav">
+               <li class="nav-item">
+                 <a class="nav-link" href="#" id="Lpuntajes">Puntajes</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link" href="./creditos.html" id="Lcreditos">Creditos</a>
+              </li>
+              <!--//////////////Fondos (navbar)///////////////-->
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Modo de pantalla
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="fonods">
+                <!--Oscuro-->
+                <li><a class="dropdown-item" href="#" id="LfonodsOsc"><input type="button" value="oscuro" class="oscuro" id="oscuro"></a></li>
+                <!--Claro-->
+                <li><a class="dropdown-item" href="#" id="LfonodsCl"><input type="button" value="claro" class="claro" id="claro"></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br>
+
+<body id="body">
+  <!--////////////////////Contenedor////////////////////////////////////-->
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-12" class="col-md-12">
+            <h1>Flappy Birds</h1>
+            <div id="fondo">
+                <img src="../statics/img/WhatsApp Image 2021-05-31 at 18.23.26.jpeg" alt="">
+                <div id="pasto"></div>
+                <div id="bird"></div>
+                <h1 id="over">Game Over</h1>
+                <h3 id="msj"></h3>
+                <div id="tubo1"><img src="../statics/img/maincra.png" alt="torre"></div>
+                <div id="tubo2"><img src="../statics/img/maincra.png" alt="torre"></div>
+                <div id="tubo3"><img src="../statics/img/maincra.png" alt="torre"></div>
+                <div id="tubo1a"><img src="../statics/img/maincra.png" alt="torre"></div>
+                <div id="tubo2a"><img src="../statics/img/maincra.png" alt="torre"></div>
+                <div id="tubo3a"><img src="../statics/img/maincra.png" alt="torre"></div>
+                <div id="marcador"></div>
+                <div id="jugar">Jugar de nuevo</div>
+            </div>
+            <!--////////////////Boton de regresar/////////////////////-->
+            <a href="./juegos.html" class="btn btn-primary" id="Breturn">Regresar</a>
+        </div>
+    </div>
+  </div>
+  <!--/////////Script para cambiar los fondos///////////-->
+<script src="../dynamics/js/flappypantalla.js"></script>
 </body>
 </html>

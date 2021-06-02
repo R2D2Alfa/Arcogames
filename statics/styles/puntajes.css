@@ -86,10 +86,46 @@ body{
     color: black;
 }
 /*----------------------------------Tabla--------------------------------------------------*/
-
-h3{
+#tabla
+{
+    position: absolute;
+    left: 23%;
+    top: 30%;
+    background-color: #97BBE8;
+    border-radius: 1em 1em 1em 1em;
+    border: none;
+}
+#title{
     text-align: center;
     font-family: 'Arcade';
     font-size: 60px;
     color: white;
+}
+.tit{
+    text-align: center;
+    font-family: 'Arcade';
+    font-size: 30px;
+    color: white;
+    border-color: #B058C6;
+    background-color: #B058C6;
+    border-width: 3px;
+    border-radius: 2em 2em 2em 2em;
+}
+td,th
+{
+    border-color:#97BBE8;
+    border-width: 3px;
+}
+table{
+    border-collapse: separate;
+    border-spacing:15px;
+}
+p
+{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    color: white;
+    border-width: 3px;
+    border-radius: 2em 2em 2em 2em;
 }

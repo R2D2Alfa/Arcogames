@@ -1,3 +1,91 @@
+/*--------------------------------Fuente arcade--------------------------------------------*/
+@font-face {
+    font-family: 'Arcade';
+    src: url('../fonts/ARCADECLASSIC.TTF') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+/*----------------------------------Body--------------------------------------------------*/
+body{
+    background-image: url(../img/533ba3.png);
+}
+#title{
+    text-align: center;
+    font-family: 'Arcade';
+    font-size: 60px;
+    color: white;
+}
+/*----------------------------------Navbar----------------------------------------------*/
+#nav{
+    background-color: #532B75;
+    border-color: black;
+}
+
+#bot{
+    background-image: url(../img/flecha.png);
+    position: relative;
+    left: -0%;
+}
+
+#Lnav{   /*letritas del nav*/
+    font-family: 'Arcade';
+    font-size: 20px;
+    color: white;
+}
+#Lpuntajes{   /*letritas de los puntajes*/
+    font-family: 'Arcade';
+    font-size: 20px;
+    color: white;
+}
+#Lcreditos{   /*letritas del nav*/
+    font-family: 'Arcade';
+    font-size: 20px;
+    color: white;
+}
+#navbarDropdown{ /*letritas del dropdown del nav*/
+    font-family: 'Arcade';
+    font-size: 20px;
+    color: white;
+}
+#fonods{   /*Para lo de cambiar los fondos*/
+    font-family: 'Arcade';
+    background-color: #532B75;
+}
+/*letritas del dropdown*/
+#LfonodsOsc{ 
+    color: white;
+}
+#LfonodsOsc:hover{
+   color: black;
+}
+#LfonodsCl{
+    color: white;
+}
+#LfonodsCl:hover{
+   color: black;
+}
+/*Botones para cambiar el color (oscuro o claro)*/
+#claro{
+    font-family: 'Arcade';
+    background-color: #532B75;
+    color: white;
+    border: none;
+}
+#claro:hover{
+    background-color: #ececec;    
+    color: black;
+}
+#oscuro{
+    font-family: 'Arcade';
+    background-color: #532B75;
+    color: white;
+    border: none;
+}
+#oscuro:hover{
+    background-color: #ececec;    
+    color: black;
+}
+/*------------------------------------------juego------------------------------------------------*/
 h1{
     position: absolute;
     left: 42%;
@@ -9,6 +97,8 @@ div > img{
 }
 
 div > h1{
+    font-family: 'Arcade';
+    font-size: 50px;
     position: absolute;
     top: 10%;
     color: red;
@@ -16,7 +106,6 @@ div > h1{
     display: none;
     z-index: 1;
 }
-
 
 #fondo{
     position: absolute;
@@ -32,13 +121,13 @@ div > h1{
     width: 100%;
     height: 10%;
     bottom: 0%;
-    background-color: green;
+    background-color: black;
 }
 #bird{
     position: absolute;
     width: 25px;
     height: 25px;
-    background-color: black;
+    background-image: url(../img/ovni\ \(1\).png);
     left: 15%;
     top: 47.5%;
     animation:salto2 2s linear infinite;
@@ -98,7 +187,8 @@ div > h1{
 #marcador{
     position: absolute;
     left: 100%;
-    background-color: rgb(15, 15, 70);
+    background-color: #533Ba3;
+    z-index: 1;
     top: 0%;
     height: 100%;
     width: 20%;
@@ -107,8 +197,10 @@ div > h1{
 #jugar{
     position: absolute;
     align-self: center;
-    background-color: darkblue;
-    color: gold;
+    font-family: 'Arcade';
+    font-size: 20px;
+    background-color:none;
+    color: black;
     border-radius: 10%;
     width: 15%;
     height: 5%;
@@ -118,6 +210,14 @@ div > h1{
     display: none;
     z-index: 1;
 }
+/*-------------------Boton de regresar-----------------------*/
 
-
-
+#Breturn{ 
+    background-color: #97BBE8;
+    font-family: 'Arcade';
+    color: white;
+    border-color: none;
+    position: relative;
+    left: 70%;
+    top: 0%;
+}
