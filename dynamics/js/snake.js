@@ -26,6 +26,8 @@ let posComida;
 let numAlYCom;
 let numAlXCom;
 let colComCol;
+let valCook = 1;
+let valRec;
 //Números aleatorios dependiendo de si es fila o columnas entre esos rangos
 function numAl(dirTab){
     return (Math.floor(Math.random()*(dirTab-1)))+1;
@@ -144,10 +146,21 @@ function dir(){
         }
         requestAnimationFrame(dir);
     }else{//Victoria o derrota
+        let cookies = document.cookie;
+        let arrCookies = cookies.split(";");
+        if(arrCookies.length >= 2){
+            for(let val of arrCookies){
+                let nomb = val.split("=");
+                valRec = nomb[0];
+                let valGalleta = valRec.split("_");
+                valCook = parseInt(valGalleta[1])+1;
+            }
+        }
         let fecha = new Date();
-        //Concatenar en una sola cookie el puntaje, jugador y fecha con un separador comun para en puntaje.js hacer comparaciones de puntajes 
+        let fechaAct = new Date();
+        cadFechAct = fechaAct.toString();
         fecha.setTime(fecha.getTime()+1000*60*60*24*7);
-        document.cookie="puntaje="+puntaje.toString()+"; expires="+fecha.toGMTString();
+        document.cookie="puntaje_"+valCook.toString()+"="+puntaje.toString()+","+cadFechAct+"; expires="+fecha.toGMTString();
         if(perdio===true){
             console.log("Perdiste");
         }

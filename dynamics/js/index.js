@@ -25,4 +25,7 @@ $(document).ready(function() {
           $('#fonods').css('background', '#532B75');
         
         });
+      $('#iniciar').click(function(event){
+          document.cookie="jugador="+ $("#jug").val();
+      });
   });
