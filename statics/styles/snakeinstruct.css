@@ -116,3 +116,65 @@ body{
     position: relative;
     left: 80%;
 }
+
+/*--------------------------------animacion------------------------------*/
+#reproductor{
+    position: absolute;
+    left: 4%;
+    top: 64%;
+   
+    animation: reproductor 6s linear infinite;
+  }
+#nota1{
+    position: absolute;
+    left: 10%;
+    top: 65%;
+    animation: nota1 2s linear infinite;
+}
+#nota2{
+    position: absolute;
+    left: 12%;
+    top: 64%;
+    animation: nota2 2s linear infinite;
+}
+#nota3{
+    position: absolute;
+    left: 15%;
+    top: 62%;
+    animation: nota3 2s linear infinite;
+}
+
+@keyframes reproductor{
+    20%{
+      transform: rotate(30deg);
+    }
+    80%{
+        transform: rotate(-30deg);
+      }
+}
+
+@keyframes nota1{
+    50%{
+      position: absolute;
+      left: 13%;
+      top: 62%;
+      transform: rotate(90deg);
+    }
+}
+@keyframes nota2{
+    50%{
+      position: absolute;
+      left: 15%;
+      top: 61%;
+      transform: rotate(-90deg);
+    }  
+}
+
+@keyframes nota3{
+    50%{
+      position: absolute;
+      left: 18%;
+      top: 59%;
+      transform: rotate(90deg);
+    }  
+}
